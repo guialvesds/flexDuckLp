@@ -1,0 +1,223 @@
+.spacer {
+  flex: 1;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: rgb(61, 61, 61);
+  font-weight: 600;
+  padding-inline: 5%;
+
+  span {
+    font-size: 2.2em;
+    font-weight: bolder;
+    color: rgb(248, 167, 46);
+  }
+
+  button {
+    padding: 10px;
+    margin-right: 10px;
+    border-radius: 20px;
+    color: rgb(248, 167, 46);
+    border: solid 1px rgb(248, 167, 46);
+    background-color: #ffffff;
+    color: rgb(248, 167, 46);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease;
+
+    &:hover {
+      background-color: rgb(248, 167, 46);
+      color: white;
+      box-shadow: 4px 4px 8px rgba(238, 170, 67, 0.925);
+      ;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+  }
+
+  // box-shadow: 4px 4px 10px rgb(163, 163, 163);
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+.content {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  section {
+
+    :last-child {
+      margin-top: 3%;
+    }
+  }
+
+  .info-system {
+    width: 100%;
+
+    h3 {
+      text-align: start;
+      font-size: 1.2em;
+      font-weight: 500;
+      color: grey;
+    }
+
+    .info-system-content {
+
+      width: 100%;
+      display: flex;
+      // justify-content: space-around;
+
+      .info-system-text {
+        width: 60%;
+
+        h1 {
+          font-size: 3em;
+          font-weight: bold;
+        }
+
+        p {
+          font-size: 1.1em;
+          line-height: 1.5em
+        }
+
+        strong {
+          color: rgb(248, 167, 46);
+        }
+      }
+
+      .info-system-img {
+        width: 40%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+footer {
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  line-height: 20px;
+}
+
+span {
+  color: rgb(136, 136, 136);
+}
+
+
+/* Responsive Styles */
+@media screen and (max-width: 820px) {
+
+  .toolbar {
+    padding-inline: 0;
+
+    span {
+      font-size: 2em;
+      font-weight: bolder;
+      color: rgb(248, 167, 46);
+    }
+  }
+
+  section {
+    :last-child {
+      margin-top: 3%;
+    }
+  }
+
+  .info-system {
+    width: 100%;
+
+    .info-system-content {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+
+      .info-system-text {
+        width: 100%;
+
+        h1, p {
+          width: 300px;
+        }
+
+      }
+
+      .info-system-img {
+        display: none;
+
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+
+}
+
+@media screen and (max-width: 575px) {
+
+
+
+  .toolbar {
+    padding-inline: 0;
+
+    span {
+      font-size: 2em;
+      font-weight: bolder;
+      color: rgb(248, 167, 46);
+    }
+  }
+
+  section {
+    :last-child {
+      margin-top: 3%;
+    }
+  }
+
+  .info-system-content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    .info-system-text {
+      width: 100%;
+
+      h1, p {
+        max-width: 412px;
+      }
+    }
+
+    .info-system-img {
+      display: none;
+
+      img {
+        display: none;
+      }
+    }
+  }
+}
