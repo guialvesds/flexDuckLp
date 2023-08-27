@@ -198,7 +198,6 @@
         width: 19rem;
         margin-top: 10px;
         display: flex;
-        border: solid 1px gray;
         flex-wrap: wrap;
         align-content: center;
         justify-content: flex-start;
@@ -210,18 +209,6 @@
           box-shadow: 0px 0px 10px gray;
           border-radius: 100%;
           margin: 1rem;
-        }
-
-        .collum-info-text {
-          flex-wrap: wrap;
-          display: flex;
-          flex-direction: column;
-          // width: 20%;
-          text-align: right;
-
-          p {
-            flex-wrap: wrap;
-          }
         }
       }
 
@@ -241,6 +228,18 @@
 
         &:nth-child(3) {
           margin-right: -8rem;
+        }
+
+        .collum-info-text {
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: column;
+          // width: 20%;
+          text-align: right;
+
+          p {
+            flex-wrap: wrap;
+          }
         }
 
       }
@@ -268,6 +267,18 @@
 
         &:nth-child(3) {
           margin-left: -8rem;
+        }
+
+        .collum-info-text {
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: column;
+          // width: 20%;
+          text-align: left;
+
+          p {
+            flex-wrap: wrap;
+          }
         }
       }
     }
