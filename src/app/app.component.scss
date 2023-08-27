@@ -21,7 +21,7 @@
     color: rgb(248, 167, 46);
   }
 
-  button {
+  a {
     padding: 10px;
     margin-right: 10px;
     border-radius: 20px;
@@ -32,6 +32,7 @@
     font-weight: bold;
     cursor: pointer;
     transition: 0.5s ease;
+    text-decoration: none;
 
     &:hover {
       background-color: rgb(248, 167, 46);
@@ -40,9 +41,9 @@
       ;
     }
 
-    a {
-      text-decoration: none;
-    }
+    // a {
+    //   text-decoration: none;
+    // }
 
 
   }
@@ -105,16 +106,167 @@
 
       .info-system-img {
         width: 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
-          max-width: 30rem;
+          max-width: 75%;
+          margin-top: -20px;
+        }
+      }
+
+      .info-system-content-vantagens {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .card {
+          width: 25rem;
+          height: 18rem;
+
+          border: none;
+          border-radius: 10px;
+          margin-left: 10px;
+          padding-inline: 5px;
+          transition: transform 0.3s ease;
+          /* Adicionando uma transição suave */
+
+          &:hover {
+            transform: translateY(-25px);
+            box-shadow: 3px 3px 10px rgb(175, 175, 175);
+            /* Movendo o card para cima quando hover */
+          }
+
+          h1 {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bolder;
+
+            strong {
+              // text-align: center;
+              font-size: 1.2em;
+              font-weight: bolder;
+              color: rgb(248, 167, 46);
+              margin-top: 5px;
+            }
+          }
+
+          span {
+            margin-top: 2rem;
+            display: block;
+            text-align: justify;
+            font-size: 1.2em;
+            font-weight: 400;
+            color: gray;
+          }
         }
       }
     }
   }
 }
 
+.info-system-content-imgs {
+  width: 100%;
+  text-align: center;
+  padding: 0;
 
+  h1 {
+    font-size: 3em;
+    font-weight: bold;
+  }
+
+  .info-system-content-imgs-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    .imgs-collum-a,
+    .imgs-collum-c {
+      height: 35rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      .imgs-collum-info {
+        width: 19rem;
+        margin-top: 10px;
+        display: flex;
+        border: solid 1px gray;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+
+        img {
+          width: 8rem;
+          box-shadow: 0px 0px 10px gray;
+          border-radius: 100%;
+        }
+
+        .collum-info-text {
+          flex-wrap: wrap;
+          display: flex;
+          flex-direction: column;
+          // width: 20%;
+          text-align: right;
+        }
+      }
+
+    }
+
+    .imgs-collum-a {
+      .imgs-collum-info {
+        flex-direction: row-reverse;
+
+        &:nth-child(1) {
+          margin-right: -8rem;
+        }
+
+        &:nth-child(2) {
+          margin-right: -4rem;
+        }
+
+        &:nth-child(3) {
+          margin-right: -8rem;
+        }
+
+      }
+    }
+  }
+
+  .imgs-collum-b {
+    padding-inline: 8rem;
+
+    img {
+      width: 35rem;
+    }
+
+  }
+
+  .imgs-collum-c {
+    .imgs-collum-info {
+
+      &:nth-child(1) {
+        margin-left: -8rem;
+      }
+
+      &:nth-child(2) {
+        margin-left: -4rem;
+      }
+
+      &:nth-child(3) {
+        margin-left: -8rem;
+      }
+    }
+  }
+
+}
 
 
 
@@ -161,7 +313,8 @@ span {
       .info-system-text {
         width: 100%;
 
-        h1, p {
+        h1,
+        p {
           width: 300px;
         }
 
@@ -207,7 +360,8 @@ span {
     .info-system-text {
       width: 100%;
 
-      h1, p {
+      h1,
+      p {
         max-width: 412px;
       }
     }
