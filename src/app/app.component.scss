@@ -174,8 +174,9 @@
   padding: 0;
 
   h1 {
-    font-size: 3em;
+    font-size: 2em;
     font-weight: bold;
+    color: rgb(61, 61, 61);
   }
 
   .info-system-content-imgs-container {
@@ -204,9 +205,11 @@
         align-items: center;
 
         img {
-          width: 8rem;
+          width: 4rem;
+          height: 4rem;
           box-shadow: 0px 0px 10px gray;
           border-radius: 100%;
+          margin: 1rem;
         }
 
         .collum-info-text {
@@ -215,6 +218,10 @@
           flex-direction: column;
           // width: 20%;
           text-align: right;
+
+          p {
+            flex-wrap: wrap;
+          }
         }
       }
 
@@ -238,32 +245,33 @@
 
       }
     }
-  }
 
-  .imgs-collum-b {
-    padding-inline: 8rem;
+    .imgs-collum-b {
+      padding-inline: 8rem;
 
-    img {
-      width: 35rem;
+      img {
+        width: 35rem;
+      }
+
     }
 
-  }
+    .imgs-collum-c {
+      .imgs-collum-info {
 
-  .imgs-collum-c {
-    .imgs-collum-info {
+        &:nth-child(1) {
+          margin-left: -8rem;
+        }
 
-      &:nth-child(1) {
-        margin-left: -8rem;
-      }
+        &:nth-child(2) {
+          margin-left: -4rem;
+        }
 
-      &:nth-child(2) {
-        margin-left: -4rem;
-      }
-
-      &:nth-child(3) {
-        margin-left: -8rem;
+        &:nth-child(3) {
+          margin-left: -8rem;
+        }
       }
     }
+
   }
 
 }
