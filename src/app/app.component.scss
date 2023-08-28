@@ -63,12 +63,12 @@
   flex-direction: column;
   align-items: center;
 
-  section {
+  // section {
 
-    :last-child {
-      margin-top: 3%;
-    }
-  }
+  //   :last-child {
+  //     margin-top: 3%;
+  //   }
+  // }
 
   .info-system {
     width: 100%;
@@ -78,12 +78,14 @@
       font-size: 1.2em;
       font-weight: 500;
       color: grey;
+
     }
 
     .info-system-content {
 
       width: 100%;
       display: flex;
+      margin-top: 5rem;
       // justify-content: space-around;
 
       .info-system-text {
@@ -126,10 +128,11 @@
         .card {
           width: 25rem;
           height: 18rem;
-
+          box-shadow: 3px 3px 10px rgb(175, 175, 175);
           border: none;
           border-radius: 10px;
           margin-left: 10px;
+          margin-bottom: 5rem;
           padding-inline: 5px;
           transition: transform 0.3s ease;
           /* Adicionando uma transição suave */
@@ -168,124 +171,205 @@
   }
 }
 
-.info-system-content-imgs {
+.info-system-imgs {
+
   width: 100%;
-  text-align: center;
   padding: 0;
 
-  h1 {
-    font-size: 2em;
-    font-weight: bold;
-    color: rgb(61, 61, 61);
-  }
-
-  .info-system-content-imgs-container {
-    margin: 0;
+  .info-system-content-imgs {
+    width: 100%;
+    text-align: center;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
+    margin-top: 5rem;
 
-    .imgs-collum-a,
-    .imgs-collum-c {
-      height: 35rem;
+    h1 {
+      font-size: 2em;
+      font-weight: bold;
+      color: rgb(61, 61, 61);
+    }
+
+    .info-system-content-imgs-container {
+      margin: 0;
+      padding: 0;
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
 
-      .imgs-collum-info {
-        width: 19rem;
-        margin-top: 10px;
+      // .imgs-collum-a,
+      // .imgs-collum-c {
+      //   height: 35rem;
+      //   display: flex;
+      //   flex-direction: column;
+      //   justify-content: space-between;
+
+      //   .imgs-collum-info {
+      //     width: 19rem;
+      //     // margin-top: 10px;
+      //     display: flex;
+      //     flex-wrap: wrap;
+      //     align-content: center;
+      //     justify-content: flex-start;
+      //     align-items: center;
+
+      //     img {
+      //       width: 4rem;
+      //       height: 4rem;
+      //       box-shadow: 0px 0px 10px gray;
+      //       border-radius: 100%;
+      //       margin: 1rem;
+      //     }
+
+      //     .collum-info-text {
+      //       width: auto;
+      //       flex-wrap: wrap;
+      //       display: flex;
+      //       flex-direction: column;
+
+      //       p {
+      //         flex-wrap: wrap;
+      //       }
+      //     }
+      //   }
+
+      // }
+
+      .imgs-collum-a {
+
+        height: 35rem;
         display: flex;
-        flex-wrap: wrap;
-        align-content: center;
-        justify-content: flex-start;
-        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .imgs-collum-info {
+          width: 19rem;
+          // margin-top: 10px;
+          display: flex;
+          // flex-wrap: wrap;
+          align-content: center;
+          // justify-content: flex-start;
+          flex-direction: row-reverse;
+          // align-items: center;
+
+          mat-icon {
+            width: 3rem;
+            height: 3rem;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 100%;
+            margin-inline: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            transition: 0.3s ease;
+            font-size: 2.3em;
+
+            &:hover {
+              color: #ffffff;
+              box-shadow: 0px 0px 10px rgb(189, 129, 39);
+              background-color: rgb(248, 167, 46);
+            }
+          }
+
+          .collum-info-text {
+            width: auto;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            text-align: right;
+
+            p {
+              flex-wrap: wrap;
+            }
+
+            .title {
+              flex-wrap: wrap;
+              font-size: 1.3em;
+              font-weight: bold;
+              color: rgb(54, 54, 54);
+            }
+          }
+        }
+
+        .item-b {
+          margin-left: -5rem;
+        }
+      }
+
+      .imgs-collum-b {
+        padding-inline: 1rem;
 
         img {
-          width: 4rem;
-          height: 4rem;
-          box-shadow: 0px 0px 10px gray;
-          border-radius: 100%;
-          margin: 1rem;
+          width: 25rem;
         }
+
       }
 
-    }
+      .imgs-collum-c {
 
-    .imgs-collum-a {
-      .imgs-collum-info {
-        flex-direction: row-reverse;
+        height: 35rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-        &:nth-child(1) {
-          margin-right: -8rem;
-        }
+        .imgs-collum-info {
 
-        &:nth-child(2) {
-          margin-right: -4rem;
-        }
-
-        &:nth-child(3) {
-          margin-right: -8rem;
-        }
-
-        .collum-info-text {
-          flex-wrap: wrap;
+          width: 19rem;
+          // margin-top: 10px;
           display: flex;
-          flex-direction: column;
-          // width: 20%;
-          text-align: right;
+          // flex-wrap: wrap;
+          align-content: center;
+          // justify-content: flex-start;
+          // align-items: center;
 
-          p {
-            flex-wrap: wrap;
+          mat-icon {
+            width: 3rem;
+            height: 3rem;
+            box-shadow: 0px 0px 10px gray;
+            border-radius: 100%;
+            margin-inline: 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            transition: 0.3s ease;
+            font-size: 2.3em;
+
+            &:hover {
+              color: #ffffff;
+              box-shadow: 0px 0px 10px rgb(189, 129, 39);
+              background-color: rgb(248, 167, 46);
+            }
           }
-        }
 
-      }
-    }
-
-    .imgs-collum-b {
-      padding-inline: 8rem;
-
-      img {
-        width: 35rem;
-      }
-
-    }
-
-    .imgs-collum-c {
-      .imgs-collum-info {
-
-        &:nth-child(1) {
-          margin-left: -8rem;
-        }
-
-        &:nth-child(2) {
-          margin-left: -4rem;
-        }
-
-        &:nth-child(3) {
-          margin-left: -8rem;
-        }
-
-        .collum-info-text {
-          flex-wrap: wrap;
-          display: flex;
-          flex-direction: column;
-          // width: 20%;
-          text-align: left;
-
-          p {
+          .collum-info-text {
+            width: auto;
             flex-wrap: wrap;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+
+            p {
+              flex-wrap: wrap;
+            }
+
+            .title {
+              flex-wrap: wrap;
+              font-size: 1.3em;
+              font-weight: bold;
+              color: rgb(54, 54, 54);
+            }
           }
         }
       }
+
     }
 
   }
 
 }
+
+
 
 
 
@@ -314,11 +398,11 @@ span {
     }
   }
 
-  section {
-    :last-child {
-      margin-top: 3%;
-    }
-  }
+  // section {
+  //   :last-child {
+  //     margin-top: 3%;
+  //   }
+  // }
 
   .info-system {
     width: 100%;
@@ -365,11 +449,11 @@ span {
     }
   }
 
-  section {
-    :last-child {
-      margin-top: 3%;
-    }
-  }
+  // section {
+  //   :last-child {
+  //     margin-top: 3%;
+  //   }
+  // }
 
   .info-system-content {
     width: 100%;
