@@ -94,6 +94,11 @@
         h1 {
           font-size: 3em;
           font-weight: bold;
+
+          strong {
+            font-size: 1.1em;
+            color: rgb(248, 167, 46);
+          }
         }
 
         p {
@@ -176,6 +181,14 @@
   width: 100%;
   padding: 0;
 
+  h3 {
+    text-align: start;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: grey;
+
+  }
+
   .info-system-content-imgs {
     width: 100%;
     text-align: center;
@@ -186,6 +199,11 @@
       font-size: 2em;
       font-weight: bold;
       color: rgb(61, 61, 61);
+
+      strong {
+        font-size: 1em;
+        color: rgb(248, 167, 46);
+      }
     }
 
     .info-system-content-imgs-container {
@@ -195,44 +213,6 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-
-      // .imgs-collum-a,
-      // .imgs-collum-c {
-      //   height: 35rem;
-      //   display: flex;
-      //   flex-direction: column;
-      //   justify-content: space-between;
-
-      //   .imgs-collum-info {
-      //     width: 19rem;
-      //     // margin-top: 10px;
-      //     display: flex;
-      //     flex-wrap: wrap;
-      //     align-content: center;
-      //     justify-content: flex-start;
-      //     align-items: center;
-
-      //     img {
-      //       width: 4rem;
-      //       height: 4rem;
-      //       box-shadow: 0px 0px 10px gray;
-      //       border-radius: 100%;
-      //       margin: 1rem;
-      //     }
-
-      //     .collum-info-text {
-      //       width: auto;
-      //       flex-wrap: wrap;
-      //       display: flex;
-      //       flex-direction: column;
-
-      //       p {
-      //         flex-wrap: wrap;
-      //       }
-      //     }
-      //   }
-
-      // }
 
       .imgs-collum-a {
 
@@ -361,12 +341,84 @@
             }
           }
         }
+
+        .item-c {
+          margin-left: 5rem;
+        }
       }
 
     }
 
   }
 
+}
+
+.footer-access {
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-block: 10px;
+
+  .footer-access-system {
+
+    width: 100%;
+
+    h3 {
+      text-align: start;
+      font-size: 1.2em;
+      font-weight: 500;
+      color: grey;
+
+    }
+
+  }
+
+  h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+
+    strong {
+      font-size: 1em;
+      color: rgb(248, 167, 46);
+    }
+  }
+
+  a {
+    width: 30rem;
+    height: 4rem;
+    margin-right: 10px;
+    border-radius: 20px;
+    color: white;
+    border: solid 1px rgb(248, 167, 46);
+    background-color: rgb(248, 167, 46);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s ease;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-block: 20px;
+
+
+    &:hover {
+      background-color: #ffffff;
+      color: rgb(248, 167, 46);
+
+      box-shadow: 4px 4px 8px rgba(238, 170, 67, 0.925);
+      ;
+    }
+
+    // a {
+    //   text-decoration: none;
+    // }
+
+
+  }
 }
 
 
@@ -384,76 +436,19 @@ span {
   color: rgb(136, 136, 136);
 }
 
+/* Regras fora da media query (regras padrão) */
 
-/* Responsive Styles */
+// ... Seu código anterior ...
+
 @media screen and (max-width: 820px) {
 
-  .toolbar {
-    padding-inline: 0;
+  .info-system-img {
+    display: none !important;
 
-    span {
-      font-size: 2em;
-      font-weight: bolder;
-      color: rgb(248, 167, 46);
+    img {
+      display: none;
     }
   }
-
-  // section {
-  //   :last-child {
-  //     margin-top: 3%;
-  //   }
-  // }
-
-  .info-system {
-    width: 100%;
-
-    .info-system-content {
-      width: 100%;
-      display: flex;
-      justify-content: flex-start;
-      align-items: flex-start;
-
-      .info-system-text {
-        width: 100%;
-
-        h1,
-        p {
-          width: 300px;
-        }
-
-      }
-
-      .info-system-img {
-        display: none;
-
-        img {
-          display: none;
-        }
-      }
-    }
-  }
-
-}
-
-@media screen and (max-width: 575px) {
-
-
-
-  .toolbar {
-    padding-inline: 0;
-
-    span {
-      font-size: 2em;
-      font-weight: bolder;
-      color: rgb(248, 167, 46);
-    }
-  }
-
-  // section {
-  //   :last-child {
-  //     margin-top: 3%;
-  //   }
-  // }
 
   .info-system-content {
     width: 100%;
@@ -465,16 +460,111 @@ span {
 
       h1,
       p {
-        max-width: 412px;
-      }
-    }
-
-    .info-system-img {
-      display: none;
-
-      img {
-        display: none;
+        width: 700px !important;
       }
     }
   }
+
+  .imgs-collum-b {
+    display: none;
+  }
+
+  .imgs-collum-a,
+  .imgs-collum-c {
+
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .imgs-collum-a {
+    margin-bottom: 2rem;
+  }
+
+  .imgs-collum-info {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 10px gray;
+    width: 30rem;
+    height: 10rem;
+    border-radius: 10px;
+  }
+
+  .info-system-content-imgs-container {
+    flex-direction: column;
+  }
+}
+
+
+
+@media screen and (max-width: 575px) {
+
+  .toolbar {
+    padding-inline: 0;
+
+    span {
+      font-size: 2em;
+      font-weight: bolder;
+      color: rgb(248, 167, 46);
+    }
+  }
+
+  .info-system-img {
+    display: none !important;
+
+    img {
+      display: none;
+    }
+  }
+
+  .info-system-content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+
+    .info-system-text {
+      width: 100%;
+
+      h1,
+      p {
+        width: 338px !important;
+      }
+    }
+
+    .imgs-collum-b {
+      display: none;
+    }
+
+    .imgs-collum-a,
+    .imgs-collum-c {
+
+      width: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .imgs-collum-a {
+      margin-bottom: 2rem;
+    }
+
+    .imgs-collum-info {
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0px 0px 10px gray;
+      width: 30rem;
+      height: 10rem;
+      border-radius: 10px;
+    }
+
+    .info-system-content-imgs-container {
+      flex-direction: column;
+    }
+  }
+
 }
