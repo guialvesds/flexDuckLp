@@ -13,12 +13,13 @@ export class EmailService {
     emailjs.init(this.user_id);
   }
 
-  enviarEmail(nome: string, email: string, mensagem: string) {
+  enviarEmail(nome: string, email: string, phone: string,  mensagem: string) {
     const params = {
       to_name: 'Destinatário',
       from_name: nome,
       message: mensagem,
-      reply_to: email
+      reply_to: email,
+      contact_phone: phone,
     };
 
     return emailjs.send('default_service', this.template_id, params);

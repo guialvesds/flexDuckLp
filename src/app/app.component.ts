@@ -1,16 +1,20 @@
 import { Component } from '@angular/core';
 import { EmailService } from './emailService.service';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+
+export class AppComponent  {
+
   title = 'flexDuckLp';
 
   public name!: string;
   public email!: string;
+  public phone!: string;
   public message!: string;
 
   public success: boolean = false;
@@ -20,7 +24,7 @@ export class AppComponent {
 
   onSubmit() {
     this.emailService
-      .enviarEmail(this.name, this.email, this.message)
+      .enviarEmail(this.name, this.phone, this.email, this.message)
       .then(() => {
         console.log('E-mail enviado com sucesso!');
         this.success = true;

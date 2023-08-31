@@ -76,7 +76,7 @@
             <mat-icon aria-hidden="false" aria-label="Example assignment icon" fontIcon="assignment"></mat-icon>
             <div class="collum-info-text">
               <p class="title">Notas Fiscais</p>
-              <p>Emita notas diretamente do seu ponto de venda ao finalizar um pedido</p>
+              <p>Lance notas fiscais direto pelo xml.</p>
             </div>
           </div>
           <div class="imgs-collum-info">
@@ -131,6 +131,9 @@
           </mat-form-field>
           <mat-form-field>
             <input matInput placeholder="E-mail" [(ngModel)]="email" name="email" required email>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput type="number" placeholder="Nº Celular" [(ngModel)]="phone" name="phone" minlength="8" maxlength="11" required phone>
           </mat-form-field>
           <mat-form-field>
             <textarea matInput placeholder="Mensagem" [(ngModel)]="message" name="message" required></textarea>
