@@ -62,7 +62,7 @@
   <section class="info-system-imgs">
     <h3>Eficiência > </h3>
     <div class="info-system-content-imgs">
-      <h1>Diversas funcionalidades para gerenciar seu negócio  <strong>></strong></h1>
+      <h1>Diversas funcionalidades para gerenciar seu negócio <strong>></strong></h1>
       <div class="info-system-content-imgs-container">
         <div class="imgs-collum-a">
           <div class="imgs-collum-info">
@@ -117,17 +117,46 @@
     </div>
   </section>
 
+  <section class="footer-send-email">
+    <div class="footer-access-system">
+      <h3>Contato ></h3>
+    </div>
+    <h1>Venha ser parceiro, entre em contato conosco e vamos agendar uma apresentação. <strong>></strong>
+    </h1>
+    <mat-card>
+      <mat-card-content class="card-form-container">
+        <form (ngSubmit)="onSubmit()">
+          <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="name" name="name" required>
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="E-mail" [(ngModel)]="email" name="email" required email>
+          </mat-form-field>
+          <mat-form-field>
+            <textarea matInput placeholder="Mensagem" [(ngModel)]="message" name="message" required></textarea>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Enviar</button>
+          <h3 *ngIf="success" class="success">E-mail enviado com sucesso!</h3>
+          <h3 *ngIf="error" class="error">Ops! E-meil não enviado!</h3>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  </section>
+
   <section class="footer-access">
     <div class="footer-access-system">
-     <h3>Acessando ERP ></h3>
+      <h3>Acessando ERP ></h3>
     </div>
 
-    <h1>Agora que você já sabe um pouco sobre nós, clique no botão abaixo e acesse o FlexDuck Web <strong>></strong></h1>
+    <h1>Agora que você já sabe um pouco sobre nós, clique no botão abaixo e acesse o FlexDuck Web <strong>></strong>
+    </h1>
 
     <a href="https://www.flexduck.com.br" target="_blank">Acessar FlexDuck</a>
   </section>
+
   <!-- Footer -->
   <footer>
-    <span>Copyright © 2023 FlexDuck by FlexDuck. Todos os direitos reservados. Por  <a href="https://github.com/guialvesds" target="_blank">Guialvesds</a></span>
+    <span>Copyright © 2023 FlexDuck by FlexDuck. Todos os direitos reservados. Por <a
+        href="https://github.com/guialvesds" target="_blank">Guialvesds</a></span>
   </footer>
 </div>
